@@ -1,0 +1,23 @@
+--Create a store database.
+
+/** Store:
+Skirts (2)
+Tank (3)
+Jeans (8)
+Shoes (1)
+Socks (1)
+**/
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER);
+
+INSERT INTO store VALUES (1, "Skirts", 2);
+INSERT INTO store VALUES (2, "Tank", 3);
+INSERT INTO store VALUES (3, "Jeans", 8);
+INSERT INTO store VALUES (4, "Shoes", 1);
+INSERT INTO store VALUES (5, "Socks", 1);
+
+--display the database ordered by quantity.
+SELECT * FROM store ORDER BY quantity;
+
+--what is the sum of the items in the store?
+SELECT SUM(quantity) FROM store;
